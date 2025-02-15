@@ -1,0 +1,14 @@
+site_name: "Containers & Kubernetes Docs"
+theme:
+  name: material
+copyright: "© 2025 Arvind Iyengar. Licensed under the Apache License, Version 2.0."
+
+extra:
+  generator: false
+  social:
+    - icon: fontawesome/solid/file
+      link: /docs/assets/resume.pdf
+    - icon: fontawesome/brands/linkedin
+      link: http://linkedin.com/in/iyengararvind
+    - icon: fontawesome/brands/github
+      link: https://github.com/aiyengar2
