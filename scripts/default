@@ -3,4 +3,4 @@ set -e
 
 source $(dirname $0)/.util.sh
 
-# Add scripts here
+./scripts/lint

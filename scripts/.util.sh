@@ -1,8 +1,6 @@
 #!/bin/bash
 set -e
 
-source $(dirname $0)/.repo.sh
-
 RED="\033[1;31m"
 YELLOW="\033[1;33m"
 GREEN="\033[1;32m"
@@ -28,6 +26,10 @@ info() {
     echo -e "${BLUE}INFO:${RESET} $1"
 }
 
+pass() {
+    echo -e "${GREEN}PASS:${RESET} $1"
+}
+
 defer_exit() {
     if [[ $EXIT_CODE -eq 0 ]]; then
         return
@@ -38,9 +40,9 @@ defer_exit() {
 init() {    
     trap defer_exit EXIT  # Ensure defer_exit is called at the end unless the script exits earlier
 
-    for command in "$@"; do
-        if ! command -v "$command" >/dev/null 2>&1; then
-            error "Please install '$command' before running make."
+    for dependency in "$@"; do
+        if ! command -v "$dependency" >/dev/null 2>&1; then
+            error "Please install '$dependency' before running make."
             exit 1
         fi
     done
