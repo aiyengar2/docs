@@ -12,7 +12,9 @@
       "allowed_languages": [
         "yaml",
         "markdown",
-        "text"
+        "text",
+        "python",
+        "go"
       ],
       "language_only": true
     },

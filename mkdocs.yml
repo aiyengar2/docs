@@ -12,3 +12,12 @@ extra:
       link: http://linkedin.com/in/iyengararvind
     - icon: fontawesome/brands/github
       link: https://github.com/aiyengar2
+
+markdown_extensions:
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences
